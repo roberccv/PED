@@ -13,5 +13,11 @@ class TestRespuesta(unittest.TestCase):
         contestacion_servidor = solucion.respuesta_del_servidor(b"Fecha")
         fecha = datetime.datetime.now().strftime("%Y-%m-%d")
         self.assertEqual(contestacion_servidor, fecha)
+    
+    def test_respuesta_Otra(self):
+        solucion = Respuesta()
+        contestacion_servidor = solucion.respuesta_del_servidor(b"Otra")
+        self.assertEqual(contestacion_servidor, "ERROR")
+        
 if __name__ == '__main__':
     unittest.main()
