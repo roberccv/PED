@@ -18,6 +18,12 @@ class TestRespuesta(unittest.TestCase):
         solucion = Respuesta()
         contestacion_servidor = solucion.respuesta_del_servidor(b"Otra")
         self.assertEqual(contestacion_servidor, "ERROR")
+    
+    def test_tipo_incorrecto(self):
+        solucion = Respuesta()
+        with self.assertRaises(TypeError):
+            contestacion_servidor = solucion.respuesta_del_servidor("holi")
         
+
 if __name__ == '__main__':
     unittest.main()
