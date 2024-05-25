@@ -5,4 +5,4 @@ class Respuesta:
             return datetime.datetime.now().strftime("%H:%M:%S")
         elif mensaje == b"Fecha":
             return datetime.datetime.now().strftime("%Y-%m-%d")
-        else: pass
+        else: return "ERROR"
