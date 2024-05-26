@@ -28,6 +28,7 @@ def main():
 
     solucion = s.recv(1024).decode()
     print(solucion)
+    s.close()
 
 if __name__ == '__main__':
     main()
