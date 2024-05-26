@@ -8,5 +8,5 @@ Para otros sistemas operativos, consulte la documentación oficial de instalaci�
 
 2º Instalar make:
     
-        sudo apt install make
+    sudo apt install make
 
