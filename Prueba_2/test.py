@@ -7,6 +7,12 @@ class TestFigura(unittest.TestCase):
         fig = Figura()
         area = fig.area(10, 0, 3, 2)
         self.assertEqual(area, ((10-0)*(3-2)))
+    
+    def test_perimetro(self):
+        fig = Figura()
+        perimetro = fig.perimetro(10, 0, 3, 2)
+        self.assertEqual(perimetro, ((10-0)*2 + (3-2)*2))
+        
 
 if __name__ == '__main__':
     unittest.main()
