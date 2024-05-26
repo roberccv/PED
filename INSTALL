@@ -1,0 +1,12 @@
+Guia de Instalación para el funcionamiento de la aplicación:
+Los comandos se han especificado para sistemas operativos basados en Debian.
+Para otros sistemas operativos, consulte la documentación oficial de instalación de paquetes e instale los indicados.
+
+1º Instalar python:
+
+    sudo apt install python3
+
+2º Instalar make:
+    
+        sudo apt install make
+
