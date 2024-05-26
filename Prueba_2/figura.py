@@ -4,4 +4,6 @@ class Figura:
         return ((X_max - X_min) * (Y_max - Y_min))
     def perimetro(self, X_max, X_min, Y_max, Y_min):
         return ((X_max - X_min) * 2 + (Y_max - Y_min) * 2)
+    def punto_medio(self, X_max, X_min, Y_max, Y_min):
+        return ((X_max + X_min)/ 2 , (Y_max + Y_min)/ 2)
         
