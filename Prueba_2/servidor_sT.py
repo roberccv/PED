@@ -19,15 +19,15 @@ def atender_cliente(ns):
     pid = os.fork()
     if pid == 0:
         while True:
-            calculo = ns.recv(1024)
-            ns.send("Siguiente")
-            X_max = ns.recv(1024)
-            ns.send("Siguiente")
-            X_min = ns.recv(1024)
-            ns.send("Siguiente")
-            Y_max = ns.recv(1024)
-            ns.send("Siguiente")
-            Y_min = ns.recv(1024)
+            calculo = ns.recv(1024).decode()
+            ns.send(b'Siguiente')
+            X_max = int(ns.recv(1024).decode())
+            ns.send(b"Siguiente")
+            X_min = int(ns.recv(1024).decode())
+            ns.send(b"Siguiente")
+            Y_max = int(ns.recv(1024).decode())
+            ns.send(b"Siguiente")
+            Y_min = int(ns.recv(1024).decode())
 
             fig = Figura()
             if calculo == "area":
@@ -38,7 +38,7 @@ def atender_cliente(ns):
                 respuesta = fig.punto_medio(X_max, X_min, Y_max, Y_min)
             else:
                 respuesta = "Error"
-            ns.send(respuesta)
+            ns.send(str(respuesta).encode())
             ns.close()
             break
 if __name__ == '__main__':
