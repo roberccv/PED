@@ -12,7 +12,12 @@ class TestFigura(unittest.TestCase):
         fig = Figura()
         perimetro = fig.perimetro(10, 0, 3, 2)
         self.assertEqual(perimetro, ((10-0)*2 + (3-2)*2))
-        
+    
+    def test_punto_medio(self):
+        fig = Figura()
+        punto_medio = fig.punto_medio(10, 0, 3, 2)
+        self.assertEqual(punto_medio, ((10+0)/2, (3+2)/2))
+
 
 if __name__ == '__main__':
     unittest.main()
